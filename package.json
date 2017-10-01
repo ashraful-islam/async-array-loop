@@ -8,7 +8,8 @@
   },
   "scripts": {
     "lint": "xo --env=node --env=mocha !*.test.js",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "istanbul cover node_modules/.bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
   "homepage": "https://github.com/ashraful-islam/async-array-loop#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.5.3",
     "xo": "^0.18.2"
   },
