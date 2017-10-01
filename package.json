@@ -8,7 +8,6 @@
   },
   "scripts": {
     "lint": "xo --env=node --env=mocha !*.test.js",
-    "pretest": "npm run lint",
     "test": "mocha --reporter spec"
   },
   "repository": {
