@@ -1,0 +1,39 @@
+{
+  "name": "async-array-loop",
+  "version": "0.1.0",
+  "description": "a small collection of non-blocking array operation methods",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "lint": "xo --env=node --env=mocha !*.test.js",
+    "pretest": "npm run lint",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashraful-islam/async-array-loop.git"
+  },
+  "keywords": [
+    "array",
+    "loop",
+    "async",
+    "nonblocking",
+    "node"
+  ],
+  "author": "Ashraful Islam <ashraful.islam@yandex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashraful-islam/async-array-loop/issues"
+  },
+  "homepage": "https://github.com/ashraful-islam/async-array-loop#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": 2
+  }
+}
