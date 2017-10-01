@@ -7,6 +7,8 @@ Async-Array-Loop
 
 A small library with non-blocking array methods(map, reduce, filter, foreach)
 
+**WARNING:** This library uses specific NodeJS api, hence *will not work in browsers*.
+
 ## Installation
 
   `npm install async-array-loop`
