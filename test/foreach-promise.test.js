@@ -52,6 +52,23 @@ describe('foreach:promise', function() {
     });
   });
 
+  it('should complete with error for invalid iteration function', function(done) {
+    arrForeach([],undefined).catch(function (err) {
+      expect(err).to.be.instanceof(Error);
+      done();
+    });
+  });
+
+  // @TODO: find a better test for this case
+  it('should immediately complete for empty array input', function(done) {
+    arrForeach([],function() {})
+    .then(function(result) {
+      //expect(result).to.be.undefined;
+      done();
+    })
+    .catch(function (err) { done(err); });
+  });
+
   it('should keep the original array intact', function() {
     expect(sampleArr).to.deep.equal(sampleArrCopy);
   })

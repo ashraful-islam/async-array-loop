@@ -73,6 +73,13 @@ describe('filter', function() {
     );
   });
 
+  it('should complete immediately for empty input arrays', function(done) {
+    arrFilter([], function() {}, function(err, result) {
+      expect(result.length).to.equal(0);
+      done(err);
+    });
+  });
+
   it('should keep the original array intact', function() {
     expect(sampleArr).to.deep.equal(sampleArrCopy);
   })

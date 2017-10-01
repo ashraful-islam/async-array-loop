@@ -72,6 +72,17 @@ describe('reduce:promise', function() {
 
   });
 
+  it('should immediately complete for empty array input', function(done) {
+    arrReduce([], function() { })
+    .then(function(result) {
+      expect(result).to.be.undefined;
+      done();
+    })
+    .catch(function(err) {
+      done(err);
+    });
+  });
+
   it('should keep the original array intact', function() {
     expect(sampleArr).to.deep.equal(sampleArrCopy);
   });

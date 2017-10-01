@@ -59,6 +59,17 @@ describe('filter with promise', function() {
     );
   });
 
+  it('should complete immediately for empty input arrays', function(done) {
+    arrFilter([], function() {})
+    .then(function(result) {
+      expect(result.length).to.equal(0);
+      done();
+    })
+    .catch(function(error){
+      done(error);
+    });
+  });
+
   it('should keep the original array intact', function() {
     expect(sampleArr).to.deep.equal(sampleArrCopy);
   })
