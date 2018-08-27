@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it, setTimeout */
+
 const arrForeach = require('./../foreach');
 const { expect } = require('chai');
 

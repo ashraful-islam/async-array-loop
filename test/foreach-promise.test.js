@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it */
+
 const arrForeach = require('./../foreach-promise');
 const { expect } = require('chai');
 

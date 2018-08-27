@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it */
+
 const arrFilter = require('./../filter');
 const { expect } = require('chai');
 
