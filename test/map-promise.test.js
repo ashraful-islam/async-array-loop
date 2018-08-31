@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it */
+
 const arrMap = require('./../map-promise');
 const { expect } = require('chai');
 

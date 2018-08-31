@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it */
+
 const arrReduce = require('./../reduce');
 const { expect } = require('chai');
 

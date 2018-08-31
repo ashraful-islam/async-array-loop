@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it */
+
 const arrForeach = require('./../foreach-promise');
 const { expect } = require('chai');
 
@@ -9,17 +11,17 @@ const sampleArrCopy = [2,3,4,5,6,7,8,9,10,11,12];
 describe('foreach:promise', function() {
 
   it('should resolve without error', function(done) {
-
+    const result = [];
     arrForeach(
       sampleArr,
       function (el, idx, arr, next) {
-
+        result.push(el);
         // some iteration should take place here
         next(null);
 
       }
-    ).then(function(result) {
-      expect(result).to.be.undefined;
+    ).then(function() {
+      expect(result).to.deep.equal(sampleArr);
       done();
     }).catch(function(error) {
       done(err);

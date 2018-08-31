@@ -1,5 +1,7 @@
 'use strict';
 
+/* global it, setTimeout */
+
 const arrForeach = require('./../foreach');
 const { expect } = require('chai');
 
@@ -65,6 +67,15 @@ describe('foreach', function() {
     arrForeach([],function() {},function (err) {
       done(err);
     });
+  });
+
+  it('should iterate all the elemnts even if no callback is provided', function(done) {
+    const result = [];
+    arrForeach(sampleArr,(el, i, arr, next) => { result.push(el); next(); });
+    setTimeout(() => {
+      expect(result).to.deep.equal(sampleArr);
+      done();
+    }, 10);
   });
 
   it('should keep the original array intact', function() {
